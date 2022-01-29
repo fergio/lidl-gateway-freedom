@@ -4,7 +4,7 @@
 #
 # PREREQ's:
 #   Python 3
-#   Install pycrypto Python library
+#   Install PyCryptodome Python library
 #   You need to have opened your device and wired up a serial port to it.
 #
 # INSTRUCTIONS:
@@ -32,7 +32,7 @@ if sys.version_info[0] < 3:
     raise RuntimeError("Python 3 is required to run this script!")
 from binascii import unhexlify
 import struct
-from Crypto.Cipher import AES
+from Cryptodome.Cipher import AES
 
 def _aschar(b):
     return struct.unpack("b", bytes([b & 0xFF]))[0]
